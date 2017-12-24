@@ -1,5 +1,5 @@
 {
-  "name": "patapatap clone",
+  "name": "patapatapClone",
   "version": "1.0.0",
   "engines": {
     "node": "8.4.0",
@@ -8,7 +8,8 @@
   "description": "a patapatap clone from Colt Steeles web dev bootcamp to practice web development",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "paper": "^0.11.5"
   },
   "devDependencies": {},
   "repository": {
