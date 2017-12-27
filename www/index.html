@@ -8,11 +8,18 @@
 	<script type="text/javascript" src="assets/js/lib/paper.js"></script>
 	<script type="text/paperscript" canvas="myCanvas">
 
-		for (var x = 0; x < 1000; x+=100) {
-			for(var y = 0; y < 1000; y += 100){
-				new Path.Circle({center: [x,y], radius: 10, fillColor: 'pink'});
-			}
+		function onKeyDown(event) {
+			playCircle();
 		}
+
+		function playCircle(){
+			var radius = Math.floor(Math.random() * 200);
+			var maxPoint = new Point(view.size.width, view.size.height);
+			var randomPoint = Point.random();
+			var point = maxPoint * randomPoint;
+			new Path.Circle({center: point, radius: radius, fillColor: 'blue'});
+		}
+
 	</script>
 </head>
 <body>
