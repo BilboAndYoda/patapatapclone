@@ -7,19 +7,13 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<script type="text/javascript" src="assets/js/lib/paper.js"></script>
 	<script type="text/paperscript" canvas="myCanvas">
-		// Create a Paper.js Path to draw a line into it:
-		var path = new Path();
-		// Give the stroke a color
-		path.strokeColor = 'black';
-		var start = new Point(100, 100);
-		// Move to start and draw a line from there
-		path.moveTo(start);
-		// Note the plus operator on Point objects.
-		// PaperScript does that for us, and much more!
-		path.lineTo(start + [ 100, -50 ]);
-		var myCircle = new Path.Circle(new Point(100, 70), 50);
-		myCircle.fillColor = 'black';
-</script>
+
+		for (var x = 0; x < 1000; x+=100) {
+			for(var y = 0; y < 1000; y += 100){
+				new Path.Circle({center: [x,y], radius: 10, fillColor: 'pink'});
+			}
+		}
+	</script>
 </head>
 <body>
 	<canvas id="myCanvas" resize></canvas>
